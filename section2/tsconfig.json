@@ -5,7 +5,10 @@
         "outDir": "dist",
         "strict": true,
         "moduleDetection": "force",
-        "skipLibCheck": false
+        "skipLibCheck": true
+    },
+    "ts-node": {
+        "esm": true
     },
     "include": ["src"]
 }

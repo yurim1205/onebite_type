@@ -27,5 +27,3 @@ const user3 = {
     name: "김",
     role: Role.GUEST
 }
-
-console.log(user1,user2,user3);

@@ -1,5 +1,5 @@
 // object
-let user:{
+let user: {
     id: number;
     name: string;
 } = {
@@ -7,7 +7,7 @@ let user:{
     name: "이유림",
 };
 
-let dog:{
+let dog: {
     name: string;
     color: string;
 } = {
@@ -16,7 +16,7 @@ let dog:{
 }
 
 // 선택적 프로퍼티
-let user2:{
+let user2: {
     id?: number;
     name: string;
 } = {
@@ -29,8 +29,8 @@ user2 = {
     name: "이유림",
 };
 
-let config:{
-    apiKey: string; // apiKey는 수정되면 안 되는 프로퍼티이므로 readonly를 붙여야함
+let config: {
+     readonly apiKey: string; // apiKey는 수정되면 안 되는 프로퍼티이므로 readonly를 붙여야함
 } = {
     apiKey: "MY API KEY",
 };

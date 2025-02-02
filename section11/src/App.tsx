@@ -19,6 +19,10 @@ function App() {
     ]);
   };
 
+  const onCLickDelete = (id: number) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   useEffect(() =>{
     console.log(todos);
   },[todos]);
@@ -29,7 +33,7 @@ function App() {
       <Editor onClickAdd={onClickAdd}></Editor>
       <div>
         {todos.map((todo) => (
-          <TodoItem key={todo.id} {...todo} />
+          <TodoItem key={todo.id} {...todo} onClickDelete = {onCLickDelete}/>
         ))}
       </div>
     </div>

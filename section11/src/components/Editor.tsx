@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { TodoDispatchontext, useTodoDispatch } from "../App";
 
 interface Props {
-    onClickAdd : (text: string) => void;
 }
 
 export default function Editor(props: Props) {
+    const dispatch = useTodoDispatch();
 
     const [text, setText] = useState("");
 
@@ -13,7 +14,7 @@ export default function Editor(props: Props) {
     };
 
     const onClickButton = () => {
-        props.onClickAdd(text);
+        dispatch.onClickAdd(text);
         setText("");
     }
 
